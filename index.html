@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validus</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+        <section id="brand">
+            <a class="logo" href="#/">
+                <img class="logo-image" src="./img/logo.png" alt="logo" />
+              </a>
+            </section>
+      <header>
+        <div class="left-section">
+          <span class="welcome-text">Welcome, Edward!</span>
+        </div>
+        <div class="right-section">
+          <span class="balance-text">Available balance: <strong class="balance-amount">$23,790.00</strong></span>
+          <button class="top-up" type="button">Top up</button>
+          <span class="notifications"><i class="far fa-bell"></i></span>
+          <img class="avatar" src="./img/avatar.png" alt="Avatar" />
+          <span class="account-more"><i class="fas fa-angle-down"></i></span>
+        </div>
+      </header>
+      
+        <aside>
+            
+          <ul class="navigation">
+            <li>
+              <a href="#/"><i class="fas fa-home"></i>Overview</a>
+            </li>
+            <li>
+              <a href="#/"><i class="fas fa-store"></i>Facilities</a>
+            </li>
+            <li>
+              <a href="#/"><i class="fas fa-chart-pie"></i>Portfolio</a>
+            </li>
+            <li>
+              <a href="#/"
+                ><i class="fas fa-hand-holding-usd"></i>Auto Invest</a
+              >
+            </li>
+            <li>
+              <a class="active" href="#/"><i class="fas fa-search-dollar"></i>Transaction</a>
+            </li>
+            <li>
+              <a href="#/"><i class="fas fa-file-invoice"></i>Statements</a>
+            </li>
+            <li>
+              <a href="#/"><i class="fas fa-boxes"></i>Investor Resources</a>
+            </li>
+            <li>
+              <a href="#/"><i class="fas fa-boxes"></i>Account</a>
+            </li>
+            <li>
+              <a href="#/"><i class="fas fa-cog"></i>Settings</a>
+            </li>
+          </ul>
+
+          <ul class="footer-links">
+            <li><a href="#/">Feedback</a></li>
+          </ul>
+        </aside>
+        <secton id="content">
+          <div class="filters">
+            <div class="filter-group">
+              <div class="search-text">
+                <i class="fas fa-search"></i>
+                <input type="text" name="search-text" placeholder="Search transactions"/>
+                
+              </div>
+              <div class="search-date">
+                <input type="text" name="search-date" placeholder="Select date" />
+                <i class="far fa-calendar"></i>
+              </div>
+            </div>
+            <button type="button">
+              <i class="fas fa-download"></i>Export to CSV
+            </button>
+          </div>
+          <div class="table">
+            <table>
+              <thead>
+                  <tr>
+                     <th>Date</th>
+                     <th>Description</th>
+                     <th>Borrower</th>
+                     <th class="right">Amount</th>
+                     <th class="right">Balance</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01/09/2020</td>
+                  <td>Fund for facility 2298</td>
+                  <td>Aerospace Quatity Supplier Pte. Ltd.</td>
+                  <td class="right"><span>$40,000.00</span><br/><span class="transaction-status">Pending</span></td>
+                  <td class="right"><span>$3,062.00</td>
+                </tr>
+                <tr>
+                    <td>01/09/2020</td>
+                    <td>Admin fee - Gross interest and late fee paid, facility 9990 transacted at 2020-08-29</td>
+                    <td>Aerospace Quatity Supplier Pte. Ltd.</td>
+                    <td class="right"><span>-$0.35</span></td>
+                    <td class="right"><span>$3,062.51</td>
+                  </tr>
+                  <tr>
+                    <td>01/09/2020</td>
+                    <td>GST on Admin fee - Gross interest and late fee paid, facility 10977</td>
+                    <td>-</td>
+                    <td class="right"><span>-$1.37</span></td>
+                    <td class="right"><span>-$1.90</td>
+                  </tr>
+                  <tr>
+                    <td>28/08/2020</td>
+                    <td>Fund for facility 2298</td>
+                    <td>Aerospace Quatity Supplier Pte. Ltd.</td>
+                    <td class="right"><span>$40,000.00</span></td>
+                    <td class="right"><span>$1,433.22</td>
+                  </tr>
+                  <tr>
+                    <td>28/08/2020</td>
+                    <td>Admin fee - Gross interest and late fee paid, facility 9990 transacted at 2020-08-29</td>
+                    <td>LJW Resource Pte. Ltd.</td>
+                    <td class="right"><span>-$0.35</span></td>
+                    <td class="right"><span>-$0.27</td>
+                  </tr>
+                  <tr>
+                    <td>24/08/2020</td>
+                    <td>GST on Admin fee - Gross interest and late fee paid, facility 10977</td>
+                    <td>LJW Resource Pte. Ltd.</td>
+                    <td class="right"><span>-$1.37</span></td>
+                    <td class="right"><span>-$0.52</td>
+                  </tr>
+                  <tr>
+                    <td>25/08/2020</td>
+                    <td>Fund for facility 2298</td>
+                    <td>Aerospace Quatity Supplier Pte. Ltd.</td>
+                    <td class="right"><span>$40,000.00</span></td>
+                    <td class="right"><span>$836.37</td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination">
+              <div class="results-showing">
+                Showing 60 of 340
+              </div>
+              <div class="page-links">
+                <ul>
+                    <li><a class="inactive" href="#/"><i class="fas fa-angle-left"></i>
+                    </a></li>
+                    <li><a class="active" href="#/">1</a></li>
+                    <li><a href="#/">2</a></li>
+                    <li><a href="#/">3</a></li>
+                    <li><a href="#/">4</a></li>
+                    <li><a href="#/">5</a></li>
+                    <li><a href="#/"><i class="fas fa-angle-right"></i>
+                    </a></li>
+                </ul>
+              </div>
+          </div>
+        </secton>
+    </div>
+  </body>
+</html>
