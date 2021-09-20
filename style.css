@@ -220,6 +220,10 @@ aside {
 .right-section .account-more {
   font-size: 20px;
 }
+.right-section .notifications:hover,
+.right-section .account-more:hover {
+  color: var(--primary-color);
+}
 .right-section .balance-text,
 .right-section .top-up,
 .right-section .notifications,
@@ -277,6 +281,9 @@ aside {
   font-weight: 600;
   color: #989797;
 }
+.filters input:focus {
+  outline: none !important;
+}
 .search-text {
   margin-right: 15px;
   display: flex;
@@ -311,6 +318,7 @@ aside {
   background-color: #f0f1f3;
   padding: 12px 15px;
   font-weight: 600;
+  cursor: pointer;
 }
 .filters button .fas {
   margin-right: 15px;
