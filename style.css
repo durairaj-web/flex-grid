@@ -274,6 +274,8 @@ aside {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-right: 15px;
+  flex: 1 0 auto;
 }
 .filter-group > div {
   margin-top: 15px;
@@ -293,9 +295,12 @@ aside {
   margin-right: 15px;
   display: flex;
   align-items: center;
+  flex: 1 0 auto;
 }
 .search-text input {
   padding-left: 50px;
+  width: 100%;
+  box-sizing: border-box;
 }
 .search-text i.fas {
   display: block;
@@ -305,6 +310,7 @@ aside {
 .search-date {
   display: flex;
   align-items: center;
+  flex: initial;
 }
 .search-date input {
   width: 100px;
@@ -323,6 +329,7 @@ aside {
   font-weight: 600;
   cursor: pointer;
   margin-top: 15px;
+  flex: initial;
 }
 .filters button .fas {
   margin-right: 15px;
@@ -331,6 +338,7 @@ aside {
 /* table */
 .results {
   display: grid;
+  margin-top: 15px;
 }
 .results table th,
 .results table td {
@@ -448,6 +456,13 @@ aside {
   }
   .results-showing {
     display: none;
+  }
+  .filters {
+    display: unset;
+  }
+  .filter-group,
+  .search-date {
+    margin-right: 0px;
   }
 }
 
