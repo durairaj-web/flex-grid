@@ -149,6 +149,7 @@ body {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #cbcaca;
+  padding: 15px;
 }
 header {
   grid-column: 3/13;
@@ -157,6 +158,7 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #cbcaca;
+  padding: 15px;
 }
 aside {
   grid-column: 1/3;
@@ -167,22 +169,15 @@ aside {
 #content {
   grid-column: 3/13;
   grid-row: 2/3;
-  padding: 20px;
+  padding: 15px;
 }
 
 /* brand */
-#brand .logo {
-  margin-left: 20px;
-  margin-right: 50px;
-}
 #brand .logo-image {
   width: 150px;
 }
 
 /* header left */
-.left-section .welcome-text {
-  padding: 0px 15px;
-}
 .left-section .welcome-text {
   font-weight: 600;
   color: #555760;
@@ -227,21 +222,20 @@ aside {
 .right-section .balance-text,
 .right-section .top-up,
 .right-section .notifications,
-.right-section .avatar,
-.right-section .account-more {
-  margin-right: 30px;
+.right-section .avatar {
+  margin-right: 15px;
 }
 
 /* aside */
-
 .navigation li {
   line-height: 10px;
+  text-align: left;
 }
 .navigation li a {
   color: var(--secondary-color);
   text-decoration: none;
   display: block;
-  padding: 15px 20px;
+  padding: 15px;
 }
 .navigation li a:hover,
 .navigation li a.active {
@@ -254,7 +248,7 @@ aside {
 }
 .footer-links {
   margin-top: 120px;
-  padding: 20px;
+  padding: 15px;
 }
 .footer-links a {
   color: blue;
@@ -290,7 +284,7 @@ aside {
   align-items: center;
 }
 .search-text input {
-  width: 600px;
+  width: 560px;
   min-width: 320px;
   padding-left: 50px;
 }
@@ -376,4 +370,44 @@ aside {
   color: #cbcaca;
   background: unset;
   border-radius: unset;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1200px) {
+  #brand .logo-image {
+    width: 120px;
+  }
+
+  aside {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background: #f6f6f6;
+    border-right: 1px solid #cbcaca;
+  }
+  .navigation li a span {
+    display: none;
+  }
+  .navigation li {
+    line-height: 10px;
+    text-align: center;
+    font-size: 16px;
+  }
+  #content {
+    grid-column: 2/13;
+  }
+  .search-text input {
+    width: 480px;
+  }
 }
