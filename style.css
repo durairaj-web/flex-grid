@@ -169,10 +169,15 @@ aside {
 #content {
   grid-column: 3/13;
   grid-row: 2/3;
-  padding: 15px;
+  padding: 0px 15px 15px;
 }
 
 /* brand */
+.humburger {
+  display: none;
+  margin-right: 15px;
+  font-size: 18px;
+}
 #brand .logo-image {
   width: 150px;
 }
@@ -263,10 +268,15 @@ aside {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 .filter-group {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+.filter-group > div {
+  margin-top: 15px;
 }
 .filters input {
   border: 1px solid #cbcaca;
@@ -279,13 +289,12 @@ aside {
   outline: none !important;
 }
 .search-text {
+  margin-left: -15px;
   margin-right: 15px;
   display: flex;
   align-items: center;
 }
 .search-text input {
-  width: 560px;
-  min-width: 320px;
   padding-left: 50px;
 }
 .search-text i.fas {
@@ -313,26 +322,27 @@ aside {
   padding: 12px 15px;
   font-weight: 600;
   cursor: pointer;
+  margin-top: 15px;
 }
 .filters button .fas {
   margin-right: 15px;
 }
 
 /* table */
-.table {
+.results {
   display: grid;
 }
-.table th,
-.table td {
+.results table th,
+.results table td {
   padding: 15px 8px;
   border-bottom: 1px solid #cbcaca;
   line-height: 30px;
 }
-.table th.right,
-.table td.right {
+.results table th.right,
+.results table td.right {
   text-align: right;
 }
-.table th {
+.results table th {
   color: #9f9d9d;
   text-align: left;
 }
@@ -340,6 +350,22 @@ aside {
   background: #f0f1f3;
   padding: 5px 10px;
   border-radius: 4px;
+}
+.results .list {
+  display: none;
+}
+.results .list li {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0px;
+  line-height: 30px;
+}
+.results .list li p:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+.results .list li p:nth-child(2) span:last-child {
+  font-weight: 600;
 }
 
 /* pagination */
@@ -372,24 +398,10 @@ aside {
   border-radius: unset;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 992px) {
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 1200px) {
   #brand .logo-image {
     width: 120px;
   }
-
   aside {
     grid-column: 1/2;
     grid-row: 2/3;
@@ -407,7 +419,49 @@ aside {
   #content {
     grid-column: 2/13;
   }
-  .search-text input {
-    width: 480px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .humburger {
+    display: block;
+  }
+  .right-section .balance-text,
+  .right-section .top-up,
+  .right-section .account-more {
+    display: none;
+  }
+  .right-section .avatar {
+    margin-right: 0px;
+  }
+  .left-section .welcome-text {
+    display: none;
+  }
+  aside {
+    grid-column: unset;
+    display: none;
+  }
+  #content {
+    grid-column: 1/13;
+  }
+  .pagination {
+    justify-content: center;
+  }
+  .results-showing {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .results table {
+    display: none;
+  }
+  .results .list {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .page-links li a {
+    padding: 4px 8px;
   }
 }
