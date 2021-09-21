@@ -7,11 +7,14 @@
     <title>Validus</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
     <div id="wrapper">
         <section id="brand">
-            <span class="humburger"><i class="fas fa-bars"></i></span>
+            <span class="humburger">
+              <i class="fas fa-bars"></i>
+            </span>
             <a class="logo" href="#/">
                 <img class="logo-image" src="./img/logo.png" alt="logo" />
               </a>
@@ -210,5 +213,20 @@
           </div>
         </secton>
     </div>
+
+    <script>
+      $(".humburger").on("click", function () {
+        var icon = $(this).children(".fas");
+        if(icon.hasClass('fa-bars')){
+          icon.removeClass("fa-bars");
+          icon.addClass("fa-times");
+          $('aside').addClass('open')
+        }else{
+          icon.removeClass("fa-times");
+          icon.addClass("fa-bars");
+          $('aside').removeClass('open')
+        }
+      });
+      </script>
   </body>
 </html>

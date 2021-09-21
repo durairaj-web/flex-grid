@@ -173,10 +173,14 @@ aside {
 }
 
 /* brand */
+#humburger {
+  display: none;
+}
 .humburger {
   display: none;
   margin-right: 15px;
   font-size: 18px;
+  cursor: pointer;
 }
 #brand .logo-image {
   width: 150px;
@@ -460,9 +464,11 @@ aside {
   .filters {
     display: unset;
   }
-  .filter-group,
-  .search-date {
+  .filter-group {
     margin-right: 0px;
+  }
+  .search-date {
+    margin-right: -15px;
   }
 }
 
@@ -473,10 +479,34 @@ aside {
   .results .list {
     display: block;
   }
+
+  aside.open {
+    display: block;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    top: 100px;
+  }
+  aside.open .navigation li a {
+    text-align: left;
+  }
+  aside.open .navigation li a span {
+    display: inline-block;
+  }
+  aside.open .navigation li a:hover,
+  aside.open .navigation li a.active {
+    border-right: unset;
+  }
 }
 
 @media only screen and (max-width: 480px) {
   .page-links li a {
     padding: 4px 8px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .search-text {
+    margin-right: 0px;
   }
 }
